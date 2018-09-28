@@ -82,16 +82,21 @@ namespace Employees
         #region Constructors
         // Constructors
         public Employee() { }
-        public Employee(string name, int id, float pay) : this(name, 0, id, pay) { }
+        public Employee(string name, int id, float pay) : this(name, 0, id, pay)
+        { }
         public Employee(string name, int age, int id, float pay) 
         {
-            // User properties when setting class data. Always!
+            // Use properties when setting class data. Always!
             // This reduces the amount of duplicate error checks.
             
             Name = name;
             Age = age;
             ID = id;
             Pay = pay;
+        }
+        public Employee(string name, int age, int id, float pay, string ssn) : this(name, age, id, pay)
+        {
+            empSSN = ssn;
         }
         #endregion
 

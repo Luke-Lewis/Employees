@@ -9,5 +9,17 @@ namespace Employees
     class Manager : Employee
     {
         public int StockOptions { get; set; }
+
+        #region Constructors
+        public Manager (string fullName, int age, int empID, float currPay, string ssn, int numbOfOpts)
+            : base(fullName, age, empID, currPay, ssn)
+        {
+            // This property is defined by the Manager class.
+            StockOptions = numbOfOpts;
+        }
+
+        // Adding default constructor back in 
+        public Manager() { }
+        #endregion
     }
 }
