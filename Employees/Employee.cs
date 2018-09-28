@@ -9,11 +9,12 @@ namespace Employees
     class Employee
     {
         // Field data
-        private string empName;
-        private int empId;
-        private float currPay;
-        private int empAge;
-        private string empSSN = "";
+        // Derived classes can now directly access this information.
+        protected string empName;
+        protected int empId;
+        protected float currPay;
+        protected int empAge;
+        protected string empSSN = "";
 
         #region Properties
         // Properties!
