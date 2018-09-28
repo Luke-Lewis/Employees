@@ -10,6 +10,13 @@ namespace Employees
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("***** The Employee Class Hierarchy *****\n");
+            SalesPerson beedle = new SalesPerson();
+            beedle.Age = 28;
+            beedle.Name = "Beedle";
+            beedle.SalesNumber = 38;
+
+            Console.ReadLine();
         }
     }
 }
