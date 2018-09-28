@@ -13,7 +13,9 @@ namespace Employees
         private int empId;
         private float currPay;
         private int empAge;
+        private string empSSN = "";
 
+        #region Properties
         // Properties!
         public string Name
         {
@@ -48,35 +50,14 @@ namespace Employees
             get { return empAge; }
             set { empAge = value; }
         }
-        
-        // Constructors
-        public Employee() { }
-        public Employee(string name, int id, float pay) : this(name, 0, id, pay) { }
-        public Employee(string name, int age, int id, float pay) 
-        {
-            // User properties when setting class data. Always!
-            // This reduces the amount of duplicate error checks.
-            
-            Name = name;
-            Age = age;
-            ID = id;
-            Pay = pay;
-        }
 
-        // Methods
-        public void GiveBonus (float amount)
+        public string SocialSecurityNumber
         {
-            Pay += amount;
+            get { return empSSN; }
         }
+        #endregion
 
-        public void DisplayStats()
-        {
-            Console.WriteLine("Name: {0}", Name);
-            Console.WriteLine("Age: {0}", Age);
-            Console.WriteLine("ID: {0}", ID);
-            Console.WriteLine("Pay: {0}", Pay);
-        }
-
+        #region Getters and Setters
         // Accessor (get method)
         public string GetName()
         {
@@ -96,5 +77,39 @@ namespace Employees
                 Name = name;
             }
         }
+        #endregion
+
+        #region Constructors
+        // Constructors
+        public Employee() { }
+        public Employee(string name, int id, float pay) : this(name, 0, id, pay) { }
+        public Employee(string name, int age, int id, float pay) 
+        {
+            // User properties when setting class data. Always!
+            // This reduces the amount of duplicate error checks.
+            
+            Name = name;
+            Age = age;
+            ID = id;
+            Pay = pay;
+        }
+        #endregion
+
+        #region Methods
+        // Methods
+        public void GiveBonus (float amount)
+        {
+            Pay += amount;
+        }
+
+        public void DisplayStats()
+        {
+            Console.WriteLine("Name: {0}", Name);
+            Console.WriteLine("Age: {0}", Age);
+            Console.WriteLine("ID: {0}", ID);
+            Console.WriteLine("Pay: {0}", Pay);
+        }
+        #endregion
+
     }
 }
