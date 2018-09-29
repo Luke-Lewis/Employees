@@ -6,12 +6,19 @@ using System.Threading.Tasks;
 
 namespace Employees
 {
-    class BenefitPackage
+    public partial class Employee
     {
-        // Assume we have other members the represent dental/health benefits, and so on.
-        public double ComputePayDeduction()
+        public class BenefitPackage
         {
-            return 125.0;
+            public enum BenefitPackageLevel
+            {
+                Standard, Gold, Platinum
+            }
+            // Assume we have other members the represent dental/health benefits, and so on.
+            public double ComputePayDeduction()
+            {
+                return 125.0;
+            }
         }
-    }
+    }    
 }

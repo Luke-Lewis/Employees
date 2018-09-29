@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Employees
 {
-    class Employee
+    partial class Employee
     {
         // Field data
         // Derived classes can now directly access this information.
