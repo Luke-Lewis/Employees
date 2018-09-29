@@ -103,12 +103,14 @@ namespace Employees
 
         #region Methods
         // Methods
-        public void GiveBonus (float amount)
+
+        // This method can be "overrideen" by a derived class by the addition of the "virtual" keyword.
+        public virtual void GiveBonus (float amount)
         {
             Pay += amount;
         }
 
-        public void DisplayStats()
+        public virtual void DisplayStats()
         {
             Console.WriteLine("Name: {0}", Name);
             Console.WriteLine("Age: {0}", Age);
