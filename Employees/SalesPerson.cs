@@ -25,7 +25,8 @@ namespace Employees
 
         #region Methods
         // A salesperson's bonus is influenced by the number of sales.
-        public override void GiveBonus(float amount)
+        // Salesperson has sealed the GiveBonus() method!
+        public override sealed void GiveBonus(float amount)
         {
             int salesBonus = 0;
             if (SalesNumber >= 0 && SalesNumber <= 100)
