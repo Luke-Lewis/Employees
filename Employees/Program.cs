@@ -16,6 +16,9 @@ namespace Employees
             beedle.Name = "Beedle";
             beedle.SalesNumber = 38;
 
+            Manager ganondorf = new Manager("Ganondorf", 200, 4, 999999, "320-10-2923", 15000);
+            double cost = ganondorf.GetBenefitCost();
+
             Console.ReadLine();
         }
     }
